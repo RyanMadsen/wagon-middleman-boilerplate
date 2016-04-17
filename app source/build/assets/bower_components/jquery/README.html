@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Middleman Boilerplate
+    |
+    
+  </title>
+  <meta charset='utf-8'>
+  <meta name='description'>
+  <meta name='keywords'>
+  <meta content='true' name='HandheldFriendly'>
+  <meta content='320' name='MobileOptimized'>
+  <meta content='initial-scale=1.0' name='viewport'>
+  <meta content='apple-touch-icon-144x144-precomposed.png' name='msapplication-TileImage'>
+  <meta content='#f5f5f5' name='msapplication-TileColor'>
+  <meta content='yes' name='apple-mobile-web-app-capable'>
+  <meta content='black' name='apple-mobile-web-app-status-bar-style'>
+  <meta content='on' http-equiv='cleartype'>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <link href='apple-touch-icon-152x152-precomposed.png' rel='apple-touch-icon-precomposed' sizes='152x152'>
+  <link href='apple-touch-icon-144x144-precomposed.png' rel='apple-touch-icon-precomposed' sizes='144x144'>
+  <link href='apple-touch-icon-120x120-precomposed.png' rel='apple-touch-icon-precomposed' sizes='120x120'>
+  <link href='apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon-precomposed' sizes='114x114'>
+  <link href='apple-touch-icon-76x76-precomposed.png' rel='apple-touch-icon-precomposed' sizes='76x76'>
+  <link href='apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon-precomposed' sizes='72x72'>
+  <link href='apple-touch-icon-60x60-precomposed.png' rel='apple-touch-icon-precomposed' sizes='60x60'>
+  <link href='apple-touch-icon-57x57-precomposed.png' rel='apple-touch-icon-precomposed' sizes='57x57'>
+  <link href='apple-touch-icon-144x144-precomposed.png' ref='apple-touch-icon-precomposed'>
+  <link href='/favicon-196x196.png' rel='icon' sizes='196x196' type='image/png'>
+  <link href='/favicon-160x160.png' rel='icon' sizes='160x160' type='image/png'>
+  <link href='/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
+  <link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+  <link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+  <link href='favicon.png' rel='shortcut icon'>
+  <link href='favicon.ico' rel='icon' type='image/ico'>
+  <link href="../../stylesheets/all.css" rel="stylesheet" />
+  <script src="../../javascripts/compatibility.js"></script>
+  <body class='assets assets_bower_components assets_bower_components_jquery assets_bower_components_jquery_README'>
+    <div class='off-canvas-wrap' data-offcanvas=''>
+      <div class='inner-wrap'>
+        <main class='main' role='main'>
+          <div class='top-navigation-container'>
+            <div class='logo'>
+              Interface
+            </div>
+            <nav class='top-navigation'>
+              <ul>
+                <li>
+                  <a href="#features">Link</a>
+                </li>
+                <li>
+                  <a href="#history">Link2</a>
+                </li>
+                <li>
+                  <a href="#about">Link3</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <h1 id="jquery">jQuery</h1>
+          
+          <blockquote>
+            <p>jQuery is a fast, small, and feature-rich JavaScript library.</p>
+          </blockquote>
+          
+          <p>For information on how to get started and how to use jQuery, please see <a href="http://api.jquery.com/">jQuery's documentation</a>.
+          For source files and issues, please visit the <a href="https://github.com/jquery/jquery">jQuery repo</a>.</p>
+          
+          <h2 id="including-jquery">Including jQuery</h2>
+          
+          <p>Below are some of the most common ways to include jQuery.</p>
+          
+          <h3 id="browser">Browser</h3>
+          
+          <h4 id="script-tag">Script tag</h4>
+          
+          <p><code>html
+          &lt;script src="https://code.jquery.com/jquery-2.2.0.min.js"&gt;&lt;/script&gt;
+          </code></p>
+          
+          <h4 id="babel">Babel</h4>
+          
+          <p><a href="http://babeljs.io/">Babel</a> is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.</p>
+          
+          <p><code>js
+          import $ from "jquery";
+          </code></p>
+          
+          <h4 id="browserifywebpack">Browserify/Webpack</h4>
+          
+          <p>There are several ways to use <a href="http://browserify.org/">Browserify</a> and <a href="https://webpack.github.io/">Webpack</a>. For more information on using these tools, please refer to the corresponding project's documention. In the script, including jQuery will usually look like this…</p>
+          
+          <p><code>js
+          var $ = require("jquery");
+          </code></p>
+          
+          <h4 id="amd-asynchronous-module-definition">AMD (Asynchronous Module Definition)</h4>
+          
+          <p>AMD is a module format built for the browser. For more information, we recommend <a href="http://requirejs.org/docs/whyamd.html">require.js' documentation</a>.</p>
+          
+          <p>```js
+          define(["jquery"], function($) {</p>
+          
+          <p>});
+          ```</p>
+          
+          <h3 id="node">Node</h3>
+          
+          <p>To include jQuery in <a href="nodejs.org">Node</a>, first install with npm.</p>
+          
+          <p><code>sh
+          npm install jquery
+          </code></p>
+          
+          <p>For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as <a href="https://github.com/tmpvar/jsdom">jsdom</a>. This can be useful for testing purposes.</p>
+          
+          <p>```js
+          require("jsdom").env("", function(err, window) {
+          	if (err) {
+          		console.error(err);
+          		return;
+          	}</p>
+          
+          <pre><code>var $ = require("jquery")(window); }); ```
+          </code></pre>
+          <div class='footer-container'>
+            <div class='large-row'>
+              <footer>
+                <div class='small-12 medium-4 large-4 columns'>
+                  <h4>
+                    Interface
+                  </h4>
+                  <p>
+                    &copy; Interface. All rights reserved.
+                  </p>
+                </div>
+                <div class='small-12 medium-4 large-4 columns'>
+                  <h5>
+                    Contact
+                  </h5>
+                  <p>
+                    A great way to contact us would be by email or phone.
+                  </p>
+                </div>
+                <div class='small-12 medium-4 large-4 columns'>
+                  <h5>
+                    Social
+                  </h5>
+                  <ul class='social'>
+                    <li>
+                      <a href="#"><i class="fa fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="../../javascripts/application.js" defer="defer" async="true"></script>
+  </body>
+</head>

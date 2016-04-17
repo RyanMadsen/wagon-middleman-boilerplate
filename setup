@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source "$HOME/.bash_profile"
+
+rvm install 2.2.0
+rvm use 2.2.0
+rvm gemset create wagon
+rvm gemset create middleman
+
+rvm use 2.2.0@wagon
+gem install bundler
+bundle install
+
+cd app\ source
+rvm use 2.2.0@middleman
+gem install bundler
+bundle install

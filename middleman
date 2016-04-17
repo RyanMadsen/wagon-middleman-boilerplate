@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd app\ source
+source "$HOME/.bash_profile"
+rvm use 2.1.3@middleman && bundle exec middleman $@

@@ -1,0 +1,28 @@
+!!!
+%head
+  %title
+    = data.page.title || 'Middleman Boilerplate'
+    |
+    = data.page.sitename
+
+
+  = partial 'meta'
+  = partial 'link'
+
+  - if data.page.url.present?
+    %link{href: (data.page.url + current_page.url), rel: 'canonical'}
+
+
+  = stylesheet_link_tag 'all'
+  = javascript_include_tag 'compatibility'
+
+
+  %body{class: page_classes}
+    .off-canvas-wrap{data: { offcanvas: ''}}
+      .inner-wrap
+        %main.main{role: 'main'}
+          = partial 'navigation'
+          = yield
+          = partial 'footer'
+
+    = javascript_include_tag 'application', defer: true, async: true
