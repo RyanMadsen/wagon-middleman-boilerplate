@@ -58,5 +58,18 @@
   {% block 'js-override' %}
   {% endblock %}
 
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.owl-prev').each(function() {
+        var $image = $(this).find('img');
+        $image.attr('src', "{{ 'left-arrow.png' | theme_image_url }}");
+      });
+      $('.owl-next').each(function() {
+        var $image = $(this).find('img');
+        $image.attr('src', "{{ 'right-arrow.png' | theme_image_url }}");
+      });
+    });
+  </script>
+
 
 </body>

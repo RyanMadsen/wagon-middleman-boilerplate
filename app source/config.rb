@@ -115,7 +115,7 @@ configure :build do
   activate :relative_assets
   activate :autoprefixer
   activate :gzip
-  # activate :wagon
+  activate :wagon
 
   #activate :automatic_image_sizes
 

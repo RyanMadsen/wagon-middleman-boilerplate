@@ -1,3 +1,8 @@
+development:
+  host: http://localhost:3000
+  handle: city-of-elsa
+  email: joshuat@createthebridge.com
+  api_key: 53ba13fe42971b98ac0d589687087bf9c4df6e38
 production:
   host: http://smart-site-02.createthebridgehosting.com
   handle: city-of-elsa

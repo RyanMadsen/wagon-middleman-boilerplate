@@ -1,0 +1,19 @@
+- "Sample 1":
+    title: "Event 1"
+    description: "Laudantium nihil et voluptatibus quibusdam officiis nesciunt nisi."
+    background: /samples/events/events-img.jpg
+
+- "Sample 2":
+    title: "Event 2"
+    description: "Labore aspernatur atque voluptatem ut architecto est."
+    background: /samples/events/events-img.jpg
+
+- "Sample 3":
+    title: "Event 3"
+    description: "Enim velit odio omnis ut at qui."
+    background: /samples/events/events-img.jpg
+
+- "Sample 4":
+    title: "Event 4"
+    description: "Eos voluptatem voluptatem in nihil."
+    background: /samples/events/events-img.jpg

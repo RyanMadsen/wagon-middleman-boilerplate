@@ -1,0 +1,14 @@
+- "Sample 1":
+    title: "Sample 1"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    event_date: 2016/06/05 # YYYY/MM/DD
+
+- "Sample 2":
+    title: "Sample 2"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    event_date: 2016/06/05 # YYYY/MM/DD
+
+- "Sample 3":
+    title: "Sample 3"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    event_date: 2016/06/05 # YYYY/MM/DD
