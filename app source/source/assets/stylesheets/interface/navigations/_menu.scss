@@ -1,0 +1,94 @@
+.top-bar-container {
+  @include container(100%);
+  padding: 1em 4.5rem;
+  position: relative;
+
+  a.logo {
+    @include span(1);
+  }
+
+  ul {
+    @include span(9);
+    display: inline-block;
+    text-align: center;
+    padding: 1.5em 0 0 0;
+
+    li {
+      display: inline-block;
+      padding: 0 1em;
+    }
+
+    a {
+      font-family: "jaf-facitweb", "Helvetica", Helvetica, Arial, sans-serif;
+      color: $nav-gray;
+      letter-spacing: 0;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+}
+
+.mobile-nav-container {
+  @include container(100%);
+  padding: 1em 2.5rem;
+  position: relative;
+
+  a.logo {
+    @include span(6 last);
+    text-align: right;
+  }
+
+  a.menu-link {
+    @include span(6);
+    margin-top: 1.5em;
+  }
+
+}
+
+.panel {
+  position: fixed;
+  left: -15.625em; /*left or right and the width of your navigation panel*/
+  width: 15.625em; /*should match the above value*/
+  background-color: #f7f7f7;
+  padding: 1.5em 0 0 1.5em;
+  box-sizing: border-box;
+
+  .side-logo {
+    img {
+      margin: 0 auto;
+      display: block;
+      padding: 1.5em 0 3em 0;
+    }
+  }
+
+  ul li {
+    padding-bottom: 1em;
+
+    a {
+      font-family: "jaf-facitweb", "Helvetica", Helvetica, Arial, sans-serif;
+      color: $nav-gray;
+    }
+  }
+}
+
+.wrap {
+  position: relative;
+}
+
+@media only screen and (min-width:1025px) {
+  .mobile-nav-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+  .top-bar-container {
+    display: none;
+  }
+
+  .mobile-nav-container {
+    display: block;
+  }
+}

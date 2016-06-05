@@ -3,14 +3,21 @@ $off-white: #f1f1f1;
 $gray: #ccc;
 $light-blue: #3598dc;
 $light-green: #2ab292;
-$light-gray: #999;
+$stroke-gray: #ddd;
+$lighter-gray: #f9f9f9;
+$light-gray: #f4f4f4;
+$soft-gray: #999;
 $medium-gray: #666;
-$dark-gray: #333;
+$dark-gray: #333333;
 $dark-blue: #22313F;
 $green: #3FC380;
 $red: #D24D57;
 $yellow: #f1c205;
 $orange: #f08a24;
+$maroon: #7b0046;
+$teal: #00a99d;
+$nav-gray: #747474;
+
 
 // Backgrounds
 $body-background-color: white;
@@ -27,38 +34,39 @@ $ms-small-base: $base-small-font-size;
 $ms-ratio: $augmented-fourth;
 $ms-small-ratio: $major-third;
 
-$ms-up-3: ms(4);
-$ms-up-2: ms(3);
-$ms-up-1: ms(2);
-$ms-up:   ms(1);
-$ms-0: $ms-base;
+$ms-up-3: ms(5);
+$ms-up-2: ms(4);
+$ms-up-1: ms(3);
+$ms-up:   ms(2);
+$ms-0: ms(1);
 $ms-down: ms(-1);
 
 $ms-small-up-3: ms(4, $ms-base, $ms-small-ratio);
 $ms-small-up-2: ms(3, $ms-base, $ms-small-ratio);
 $ms-small-up-1: ms(2, $ms-base, $ms-small-ratio);
 $ms-small-up:   ms(1, $ms-base, $ms-small-ratio);
-$ms-0: $ms-base;
+$ms-small-0: $ms-base;
 $ms-small-down:  ms(-1);
 
-$font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$font-weight: normal;
+
+$font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, sans-serif;
+$font-weight: 500;
 $font-color: $medium-gray;
-$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-weight: normal;
+$header-font-family: "jaf-facitweb", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-weight: 700;
 $header-font-color: $dark-gray;
 
 
 // Buttons
-$button-font-size: rem-calc(14);
+$button-font-size: rem-calc(12);
 $button-font-weight: $font-weight;
-$button-background-color: $light-green;
-$button-background-color-hover: scale_color($button-background-color, $lightness: -20%);
-$button-border: none;
-$button-border-color: none;
-$button-border-color-hover: none;
-$button-color: white;
-$button-color-hover: white;
+$button-background-color: white;
+$button-background-color-hover: white;
+$button-border: 2px solid;
+$button-border-color: $soft-gray;
+$button-border-color-hover: black;
+$button-color: $soft-gray;
+$button-color-hover: black;
 
 
 // Links
@@ -72,7 +80,7 @@ $label-weight: 200;
 $label-color: $dark-gray;
 $form-color: $medium-gray;
 $form-background-color: white;
-$form-background-color-focus: $off-white;
+$form-background-color-focus: white;
 $form-box-shadow: none;
 $form-border-color: #ccc;
 $form-border-color-hover: scale_color($form-border-color, $lightness: -20%);
@@ -92,7 +100,7 @@ $list-item-background-color-odd: scale_color($list-item-background-color, $light
 
 
 // Borders
-$round-edges: rem-calc(5);
+$round-edges: rem-calc(3);
 $border-color: $light-green;
 
 

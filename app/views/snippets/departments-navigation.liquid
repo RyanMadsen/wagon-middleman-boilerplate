@@ -1,0 +1,40 @@
+<div class="quick-links">
+  <h3>Quick Links</h3>
+  <hr>
+  <ul>
+    {% for department in contents.departments %}
+
+      <li>
+        <a href="#" data-section="{{department._slug}}" class="department-link">
+          <h5>{{ department.name }}</h5>
+          <img src="{{ 'city-commission/right-arrow.svg' | theme_image_url }}" />
+        </a>
+      </li>
+
+    {% endfor %}
+  </ul>
+
+  <a class='report-crime' href='#'>
+    <hr>
+    <h5>
+      <span>On the watch?</span>
+      <br>
+      <span>Report a crime.</span>
+    </h5>
+    <div class='crime-img'>
+      <img src="{{ 'departments/report-crime-img.png' | theme_image_url }}" />
+    </div>
+  </a>
+
+  <a class='pay-bills' href='#'>
+    <hr>
+    <h5>
+      <span>Don't struggle.</span>
+      <br>
+      <span>Pay your bills online.</span>
+    </h5>
+    <div class='bills-img'>
+      <img src="{{ 'departments/pay-bills.png' | theme_image_url }}" />
+    </div>
+  </a>
+</div>

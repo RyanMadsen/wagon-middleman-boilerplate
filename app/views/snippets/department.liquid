@@ -1,0 +1,26 @@
+<section id="{{department._slug}}" class="body-content">
+  <div class="department-content">
+    <ul>
+      {% for section in department.content_blocks %}
+        <li>
+          <a data-target="{{section._slug}}" href="#" class="sub-link">
+            <h5>{{section.link_text}}</h5>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% for block in department.content_blocks %}
+      <div class='sub-content' id="{{block._slug}}">
+        <h3>{{block.title}}</h3>
+        <hr>
+        <p>
+          {{block.content}}
+        </p>
+
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include 'departments-navigation' %}
+</section>

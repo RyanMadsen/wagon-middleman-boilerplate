@@ -1,0 +1,1 @@
+(function(){var e;e=$(".owl-carousel"),$(document).ready(function(){return e.owlCarousel({items:1,itemsDesktop:!1,itemsDesktopSmall:[900,1],itemsTablet:!1,itemsMobile:!1,navigation:!0,navigationText:["<img src='assets/images/left-arrow.png'>","<img src='assets/images/right-arrow.png'>"]})})}).call(this);

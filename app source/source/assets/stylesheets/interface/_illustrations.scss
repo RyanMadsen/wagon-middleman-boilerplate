@@ -1,0 +1,114 @@
+// .illustration {
+//
+//   .normal, .colored {
+//     transition: all 0.2s linear;
+//   }
+//
+//   .normal {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+//
+//   .colored {
+//     opacity: 0;
+//     visibility: hidden;
+//   }
+//
+//
+//   // &:hover {
+//   //
+//   //   .normal {
+//   //     opacity: 0;
+//   //     visibility: hidden;
+//   //   }
+//   //
+//   //   .colored {
+//   //     opacity: 1;
+//   //     visibility: visible;
+//   //   }
+//   //
+//   // }
+//
+// }
+//
+//
+// .crane-label {
+//   span {
+//     &:first-of-type {
+//       right: -20px;
+//       position: relative;
+//     }
+//     &:last-of-type {
+//       left: -15px;
+//       position: relative;
+//     }
+//   }
+//
+//   span, svg {
+//     display: inline-block;
+//   }
+//
+//   svg {
+//     margin: 0 !important;
+//     width: 50px;
+//     position: relative;
+//     transform: translateY(25%);
+//   }
+//
+// }
+//
+// .preloader {
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 9999;
+//   position: fixed;
+//   background-color: $elco-blue;
+//
+//   canvas {
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     position: absolute;
+//   }
+//
+//   .skew {
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//
+//     position: absolute;
+//     background-color: $gold;
+//     transform: scale(0, 0);
+//     transform-origin: top left;
+//   }
+//
+//   svg {
+//     top: 50%;
+//     left: 50%;
+//     position: absolute;
+//     transform: translate(-50%, -50%);
+//     opacity: 0;
+//
+//     rect {
+//       fill: $elco-blue;
+//     }
+//   }
+// }
+//
+//
+// @media only screen and (max-width: 1024px) {
+//   .crane-label {
+//     span {
+//       &:first-of-type { right: auto; }
+//       &:last-of-type { left: auto; }
+//     }
+//
+//     svg {
+//       width: 30px;
+//     }
+//   }
+// }

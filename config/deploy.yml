@@ -1,16 +1,5 @@
-# development:
-#   host: dev.example.com
-#   email: john@doe.net
-#   password: apassword
-#   # api_key: <your api key here>
-# staging:
-#   host: staging.example.com
-#   email: john@doe.net
-#   password: apassword
-#   # api_key: <your api key here>
-# production:
-#   host: www.example.com
-#   email: john@doe.net
-#   password: apassword
-#   # api_key: <your api key here>
-#   # ssl: true
+production:
+  host: http://smart-site-02.createthebridgehosting.com
+  handle: city-of-elsa
+  email: hello@createthebridge.com
+  api_key: e6a867d7ad42c1598e08b1555cc018460da15c48

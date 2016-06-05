@@ -1,0 +1,90 @@
+---
+title: Department
+listed: true
+published: true
+seo_title: "Departments | City of Elsa"
+seo_keywords: "cooling, crane-lift, electraic services, quick cranes, general contractors"
+seo_description: "Cooling, Crane-Lifts, and Electric services—let us help you with your next project. Visit our page."
+---
+
+{% extends 'layout' %}
+
+{% block 'css-override' %}
+  {{ 'overrides.css' | stylesheet_tag }}
+{% endblock %}
+
+
+{% block main %}
+
+  <div class='departments-container'>
+    {% block 'page-header' %}
+      <header>
+        <div id='particles-js'></div>
+        <div class='header-container'>
+          <h1>
+            {% editable_text 'heading' %}
+              Departments
+            {% endeditable_text %}
+          </h1>
+          <h5>
+            {% editable_text 'sub-heading' %}
+              Welcome to a city where ipsum dolor sit amet consectetur adipiscing elit.
+            {% endeditable_text %}
+          </h5>
+        </div>
+      </header>
+    {% endblock %}
+
+
+    {% for department in contents.departments %}
+      {% include 'department' with department: depmartment, first: forloop.first %}
+    {% endfor %}
+
+  </div>
+
+{% endblock %}
+
+
+{% block 'js-override' %}
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.sub-link').off('click');
+      $('.sub-link').on('click', function(event) {
+        event.preventDefault();
+
+        var section = $(this).attr('data-target');
+        var $container = $(this).closest('section.body-content');
+        var $section = $container.find('#' + section);
+
+        $container.find('.sub-link h5.active').removeClass('active');
+        $(this).find('h5').addClass('active');
+
+        $container.find('.sub-content.current').removeClass('current');
+        $section.addClass('current');
+      });
+
+      $('.department-link').on('click', function(event) {
+        event.preventDefault();
+
+        var section = $(this).attr('data-section');
+
+        $('.department-link h5.active').each(function() {
+          $(this).removeClass('active');
+        });
+
+        $('.department-link[data-section="' + section + '"] h5').each(function() {
+          $(this).addClass('active');
+        });
+
+        var $section = $('#' + $(this).attr('data-section'));
+        $('.body-content.current').removeClass('current');
+        $section.addClass('current');
+        $section.find('.sub-link').first().trigger('click');
+      });
+
+      $('.department-link').first().trigger('click');
+    });
+  </script>
+
+{% endblock %}

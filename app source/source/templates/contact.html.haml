@@ -1,0 +1,90 @@
+---
+title: Contact
+description: Cooling, Crane-Lifts, and Electric services—let us help you with your next project. Visit our page.
+keywords: cooling, crane-lift, electraic services, quick cranes, general contractors
+sitename: City of Elsa
+url: http://www.cityofelsa.com
+---
+.contact-container
+  %header
+    #particles-js
+    .header-container
+      %h1 Contact Us
+      %h5 Welcome to a city where ipsum dolor sit amet consectetur adipiscing elit.
+  %section.body-content
+    .contact-content
+      %h3 Send Us an Email!
+      %hr
+      %form#contact-form{'data-send-to' => 'luisedtr@createthebridge.com'}
+        .input-group
+          %span
+            %label
+              %span
+                NAME
+            %input{type: 'text', name: 'name', id: 'name', 'data-merge-var' => 'FNAME', 'data-required' => ''}
+          %span
+            %label
+              %span
+                PHOME
+            %input{type: 'tel', name: 'phone', id: 'phone', 'data-merge-var' => 'PHONE', 'data-required' => ''}
+          %span
+            %label
+              %span
+                EMAIL ADDRESS
+            %input{type: 'email', name: 'email', id: 'email', 'data-merge-var' => 'EMAIL', 'data-required' => ''}
+          %span
+            %label
+              %span
+                MESSAGE
+            %textarea{:form => "form", :name => "message", id: 'message', 'data-merge-var' => 'MSG', 'data-required' => ''}
+            -# %input{type: 'text', name: 'message', id: 'message', 'data-merge-var' => 'MSG', 'data-required' => ''}
+        .response-template{style: 'display: none'}
+          You have received a contact form submission from {{FNAME}}
+          %br
+          %br
+          Name: {{FNAME}}
+          %br
+          Phone: {{PHONE}}
+          %br
+          Company: {{EMAIL}}
+          %br
+          %br
+          {{MSG}}
+
+        %input{type: 'submit', value: 'SUBMIT', class: 'button'}
+
+    .quick-links
+      %h3 Directory
+      %hr
+      %ul
+        %li
+          %div
+            %h5 Department 1
+            %h6 956-555-5555
+        %li
+          %div
+            %h5 Department 2
+            %h6 956-555-5555
+        %li
+          %div
+            %h5 Department 3
+            %h6 956-555-5555
+        %li
+          %div
+            %h5 Department 4
+            %h6 956-555-5555
+        %li
+          %div
+            %h5 Department 5
+            %h6 956-555-5555
+        %li
+          %div
+            %h5 Department 6
+            %h6 956-555-5555
+        %li
+          %div
+            %h5 Department 7
+            %h6 956-555-5555
+  %section
+    #google-map
+      .map

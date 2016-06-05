@@ -1,23 +1,88 @@
 .footer-container
-  .large-row
-    %footer
-      .small-12.medium-4.large-4.columns
-        %h4
-          Interface
-        %p
-          &copy; Interface. All rights reserved.
-      .small-12.medium-4.large-4.columns
-        %h5
-          Contact
-        %p
-          A great way to contact us would be by email or phone.
-      .small-12.medium-4.large-4.columns
-        %h5
-          Social
-        %ul.social
-          %li
-            = link_to content_tag(:i, nil, :class => 'fa fa-facebook-square'), '#'
-          %li
-            = link_to content_tag(:i, nil, :class => 'fa fa-twitter-square'), '#'
-          %li
-            = link_to content_tag(:i, nil, :class => 'fa fa-instagram'), '#'
+  %footer
+    = image_tag 'footer/logo-footer.png'
+
+    .footer-links
+      %h5 DEPARTMENTS
+      %ul
+        %li
+          = link_to 'City Manager', '/product-services.html'
+        %li
+          = link_to 'City Secretary', '/case-studies.html'
+        %li
+          = link_to 'Finance', '/crane.html'
+        %li
+          = link_to 'Human Resource', '/partnership.html'
+        %li
+          = link_to 'Code Enforcement', '/about.html'
+        %li
+          = link_to 'Public Works', '/contact.html'
+        %li
+          = link_to 'Municipal Court', '/contact.html'
+        %li
+          = link_to 'Library', '/contact.html'
+        %li
+          = link_to 'Police', '/contact.html'
+        %li
+          = link_to 'Fire', '/contact.html'
+        %li
+          = link_to 'Parks &amp; Recreation', '/contact.html'
+
+    .footer-links
+      %h5 COMMUNITY
+      %ul
+        %li
+          = link_to 'Events', '/product-services.html'
+        %li
+          = link_to 'Calendar', '/case-studies.html'
+        %li
+          = link_to 'Vital Statistics', '/crane.html'
+
+    .footer-links
+      %h5 CITY COMMISSION
+      %ul
+        %li
+          = link_to 'Agenda & Minutes', '/product-services.html'
+        %li
+          = link_to 'City Council', '/case-studies.html'
+
+    .footer-links
+      %h5 EDC
+      %ul
+        %li
+          = link_to 'New Projects', '/product-services.html'
+        %li
+          = link_to 'Resources', '/case-studies.html'
+        %li
+          = link_to 'Business &amp; Industrial Development', '/case-studies.html'
+
+    .footer-links
+      %h5 VISITORS
+      %ul
+        %li
+          = link_to 'Places to Visit', '/product-services.html'
+        %li
+          = link_to 'History', '/case-studies.html'
+
+    .footer-links.last
+      %h5 CONTACT
+      %ul
+        %li
+          %span Office:
+          %span 956 - 555 - 5555
+        %li
+          %span Fax:
+          %span 956 - 555 - 5555
+        %li
+          %span Email:
+          %span elsa@cityofelsa.net
+
+    .link-back
+      %h6 © 2016 City of Elsa. All rights reserved.
+      = link_to 'Website Design', '//www.createthebridge.com'
+      %span by
+      = link_to 'Create the Bridge', '//www.createthebridge.com'
+
+    .social
+      %a{:href => "#"}
+        = image_tag 'footer/facebook.svg'

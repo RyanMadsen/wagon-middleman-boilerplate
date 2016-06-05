@@ -1,0 +1,275 @@
+.tab {
+  display: none;
+
+  &.active-tab {
+    display: block;
+  }
+}
+
+.statement.active {
+  color: $teal;
+}
+
+.edc-idc-container {
+  header {
+    @include container(95%);
+    background: image-url('edc/edc-header-img.jpg') no-repeat center right;
+    background-size: cover;
+    position: relative;
+    height: 30em;
+    text-align: left;
+    padding: 0 2.5em;
+    box-sizing: border-box;
+
+    .header-container {
+      @include container(87.5em);
+      position: relative;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+
+    h1, h5 {
+      color: white;
+    }
+
+    h1 {
+      font-weight: 400;
+      padding-bottom: 1rem;
+    }
+
+    h5 {
+      max-width: 30em;
+    }
+  }
+
+  .mission-statement {
+    @include container(59em);
+    padding: 4.5em 2.5em 3em 2.5em;
+
+    li {
+      display: inline-block;
+      padding: 0em 1em 1.5em 0em;
+    }
+
+    a {
+      font-family: "jaf-facitweb", "Helvetica", Helvetica, Arial, sans-serif;
+      letter-spacing: 0;
+      color: #cccccc;
+
+      &:hover,
+      &.active {
+        color: $teal;
+      }
+    }
+
+    hr {
+      margin-bottom: 0;
+    }
+  }
+
+  .statement {
+    display: none;
+
+    &.current {
+      display: block;
+    }
+  }
+
+  .featured-new-project {
+    @include container(71.25em);
+    padding: 4.5em 2.5em 3em 2.5em;
+    box-sizing: border-box;
+
+    hr {
+      margin-bottom: 0;
+
+      &:last-of-type {
+        border-bottom: 3px solid $teal;
+      }
+    }
+
+    // h4 {
+    //   display: inline-block;
+    //   padding-top: 1em;
+    // }
+
+    h6 {
+      margin-top: 1em;
+      display: inline-block;
+    }
+
+    .image-parent-container {
+      a {
+        margin: 1.5em 0;
+        @include span(1.5 of 12);
+
+        &:last-of-type {
+          @include span(1.5 of 12 last);
+        }
+      }
+    }
+
+    img {
+      @include span(12 of 12);
+      margin: 1.5em 0;
+    }
+
+    li {
+      display: inline-block;
+      @include span(2.4 of 12);
+
+      &:last-of-type {
+        @include span(2.4 of 12 last);
+      }
+
+      hr {
+        border-bottom: 3px solid $teal;
+      }
+    }
+  }
+
+  .quick-facts {
+    background-color: #fbfbfb;
+
+    .quick-facts-container {
+      @include container(71.25em);
+      padding: 4.5em 2.5em 6em 2.5em;
+    }
+
+    .quick-facts-map {
+      @include span(6);
+
+      img {
+        width: 100%
+      }
+    }
+
+    ul {
+      @include span(6 last);
+    }
+
+    li {
+      border-bottom: 1px dotted $stroke-gray;
+      max-width: 70%;
+    }
+
+    p {
+      display: inline-block;
+      margin: 1em 0;
+    }
+  }
+
+  .start-business {
+    @include container(71.25em);
+    padding: 4.5em 2.5em 6em 2.5em;
+    text-align: center;
+
+    .business-content {
+      @include span(4);
+      margin-top: 3em;
+      margin-bottom: 4.5em;
+
+      &:nth-of-type(3), &:nth-of-type(6) {
+        @include span(4 last);
+      }
+    }
+
+    hr {
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    h3 {
+      clear: both;
+    }
+
+    h5 {
+      margin-top: 1.5em;
+    }
+  }
+
+  .active {
+    color: $teal !important;
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  hr {
+    width: 3em;
+    border-bottom: 3px solid $maroon;
+    margin-bottom: 3em;
+    display: table-caption;
+  }
+
+  @media only screen and (max-width:1024px) {
+    .quick-facts {
+      li {
+        max-width: 80%;
+      }
+    }
+  }
+
+  @media only screen and (max-width:768px) {
+    .quick-facts {
+      .quick-facts-map {
+        @include span(12);
+      }
+
+      ul {
+        @include span(12);
+        margin-top: 3em;
+      }
+
+      li {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width:680px) {
+    .featured-new-project {
+
+      li {
+        display: inline-block;
+        @include span(6 of 12);
+
+        &:nth-of-type(2), &:nth-of-type(4) {
+          @include span(6 of 12 last);
+        }
+
+        &:last-of-type {
+          @include span(6 of 12);
+        }
+      }
+
+      h6 {
+        display: block;
+        clear: both;
+        margin-top: 1em;
+      }
+
+      .image-parent-container {
+        a {
+          margin: 1.5em 0;
+          @include span(4 of 12);
+
+          &:last-of-type {
+            @include span(4 of 12 );
+          }
+        }
+      }
+    }
+
+    .start-business {
+      .business-content {
+        @include span(12);
+
+        &:nth-of-type(3), &:nth-of-type(6) {
+          @include span(12);
+        }
+      }
+    }
+  }
+}

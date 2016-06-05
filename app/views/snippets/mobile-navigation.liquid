@@ -1,0 +1,36 @@
+<div class='mobile-nav-container'>
+  <a class='logo' href='/'>
+    <img src="{{ 'logo.png' | theme_image_url }}" />
+  </a>
+  <a class='menu-link' href='#menu'>
+    <img src="{{ 'menu-icon-b.svg' | theme_image_url }}" />
+  </a>
+  <nav class='panel' id='menu' role='navigation'>
+    <div class='side-logo'>
+      <img src="{{ 'logo.png' | theme_image_url }}" />
+    </div>
+    <ul>
+      <li>
+        <a href="{% path_to index %}">Home</a>
+      </li>
+      <li>
+        <a href="{% path_to departments %}">Departments</a>
+      </li>
+      <li>
+        <a href="{% path_to community %}">Community</a>
+      </li>
+      <li>
+        <a href="{% path_to city-commission %}">City Commission</a>
+      </li>
+      <li>
+        <a href="{% path_to edc-idc %}">EDC - IDC</a>
+      </li>
+      <li>
+        <a href="{% path_to visitor %}">Visitor</a>
+      </li>
+      <li>
+        <a href="{% path_to contact %}">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>

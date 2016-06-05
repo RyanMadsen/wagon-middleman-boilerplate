@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$(".contact-open").click(function(t){t.preventDefault(),$(".request-quote").css("visibility","visible")}),$(".contact-close").click(function(t){t.preventDefault(),$(".request-quote").css("visibility","hidden")})});

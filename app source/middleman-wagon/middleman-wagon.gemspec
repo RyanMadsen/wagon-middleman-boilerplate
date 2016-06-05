@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   # The version of middleman-core your extension depends on
   s.add_runtime_dependency("middleman-core", [">= 3.4.0"])
+  s.add_runtime_dependency("nokogiri", [">=1.6.7.2"])
 
   # Additional dependencies
   # s.add_runtime_dependency("gem-name", "gem-version")

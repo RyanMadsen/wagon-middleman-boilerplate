@@ -1,0 +1,158 @@
+.city-commission-container {
+  header {
+    @include container(95%);
+    background: image-url('city-commission/city-commission-img.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    height: 30em;
+    text-align: left;
+    padding: 0 2.5em;
+    box-sizing: border-box;
+
+    .header-container {
+      @include container(87.5em);
+      position: relative;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+
+    h1, h5 {
+      color: white;
+    }
+
+    h1 {
+      font-weight: 400;
+      padding-bottom: 1rem;
+    }
+
+    h5 {
+      max-width: 30em;
+    }
+  }
+
+  .city-counil-staff {
+    @include container(87.5em);
+    padding-bottom: 4.5em;
+    padding: 0 2.5em;
+    box-sizing: border-box;
+
+    .city-member {
+      @include span(4);
+      padding-bottom: 6em;
+
+      &:nth-of-type(3) {
+        @include span(4 last);
+      }
+
+      h3 {
+        font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, sans-serif;
+      }
+    }
+
+    h3 {
+      font-weight: 400;
+      padding-top: 1.5em;
+    }
+
+    a {
+      padding-top: 3em;
+      display: inline-block;
+      color: $dark-gray;
+      letter-spacing: 0;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+
+    img {
+      display: inline-block;
+      padding-left: 1em;
+    }
+  }
+
+  .agenda-minutes {
+    @include container(87.5em);
+    padding: 0 2.5em;
+    padding-bottom: 3em;
+    box-sizing: border-box;
+
+    h3 {
+      font-weight: 400;
+      padding-top: 1.5em;
+    }
+
+    ul > li {
+      @include span(4);
+      border-bottom: 1px dotted $stroke-gray;
+      padding-bottom: .5em;
+      margin-bottom: 1.5em;
+
+      &:nth-of-type(3), &:nth-of-type(6) {
+        @include span(4 last);
+      }
+
+      a, h5 {
+        display: inline-block;
+      }
+
+      img {
+        padding-left: .5em;
+      }
+    }
+  }
+
+  hr {
+    width: 3em;
+    border-bottom: 3px solid $maroon;
+    margin-bottom: 3em;
+    display: table-caption;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .city-counil-staff {
+
+      .city-member {
+        @include span(6);
+        padding-bottom: 6em;
+
+        &:nth-of-type(3) {
+          @include span(6);
+        }
+
+        &:nth-of-type(2), &:nth-of-type(4),  {
+          @include span(6 last);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
+    .city-counil-staff {
+
+      .city-member {
+        @include span(12);
+        padding-bottom: 6em;
+
+        &:nth-of-type(3) {
+          @include span(12);
+        }
+
+        &:nth-of-type(2), &:nth-of-type(4),  {
+          @include span(12);
+        }
+      }
+    }
+
+    .agenda-minutes {
+
+      ul > li {
+        @include span(12);
+
+        &:nth-of-type(3), &:nth-of-type(6) {
+          @include span(12);
+        }
+      }
+    }
+  }
+}

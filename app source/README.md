@@ -14,10 +14,6 @@ Getting this project started is easy. Simply
 
     - Visit web page at "http://localhost:4567/"
 
-# Sitemap
-
-The sitemap is automatically generated. Change the site URL in the file `data/sitemap.yml`
-
 # Using Javascript ES6
 
 To use ES6, you need to specify that the javascript file is an ES6 file by including .es6 as the extension
@@ -109,17 +105,29 @@ page "/index.html", proxy: "/templates/index.html"
 
 # How to finalize a build
 
-`In the config.rb do the following:`
+Use Ctrl+Shift+Slash to block comment/uncomment in config.rb.
+
+    - ex. ctrl + shift + /
+
+These are commented out as they break staging to Heroku.
+
+In the config.rb do the following:
+
+    - uncomment require 'extensions/sitemap.rb'
 
     - uncomment activate :favicon_maker
+
+    - uncomment activate :imageoptim
 
     - uncomment activate :minify_css
 
     - uncomment activate :minify_javascript
 
+    - uncomment activate :sitemap_generator
+
     - uncomment activate :gzip
 
-`Confirm the following are correct on each pages data:`
+Confirm the following are correct on each pages frontmatter:
 
     - title
 
@@ -131,6 +139,10 @@ page "/index.html", proxy: "/templates/index.html"
 
     - url
 
-`Verify favicon template is in place:`
+Check 'javascripts/_typekitfont.js' to confirm kit id is correct.
 
-    - Favicon Maker will generate the favicons correctly, you need `favicon_template.png` in the source directory for this to work. Link declarations are defined in `source/partials/_link.haml`
+Check 'javascripts/_ga.js' to confirm UA-XXXXX-X code is correct.
+
+For favicon maker to work include favicon_template.png in source directory. Ideal image size is 152x152.
+
+Make sure to change the URL in 'extensions/sitemap.rb' to the proper live domain.

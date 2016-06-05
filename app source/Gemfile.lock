@@ -16,10 +16,11 @@ GIT
       middleman-core (>= 3.2)
 
 PATH
-  remote: middleman-wagon
+  remote: ./middleman-wagon
   specs:
     middleman-wagon (1.0.0)
       middleman-core (>= 3.4.0)
+      nokogiri (>= 1.6.7.2)
 
 GEM
   remote: http://rubygems.org/
@@ -215,4 +216,4 @@ DEPENDENCIES
   susy
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

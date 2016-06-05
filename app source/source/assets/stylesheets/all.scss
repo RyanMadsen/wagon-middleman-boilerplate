@@ -2,90 +2,11 @@
 @import '../bower_components/font-awesome/scss/font-awesome';
 @import 'interface/base';
 @import 'pages/base';
-
-
-
-
+@import 'owl.carousel';
+@import 'owl.theme';
+@import 'magnific-popup';
 
 %section-offset {
   margin-top: -55px;
   padding-top: 55px;
 }
-
-.index {
-
-  #header {
-    height: 100vh;
-    position: relative;
-    background: image-url('background.jpg') no-repeat center;
-    background-size: cover;
-
-    .row {
-      height: 40%;
-      margin: auto;
-      position: absolute;
-      top: 0; left: 0; bottom: 0; right: 0;
-      text-align: center;
-    }
-  }
-
-  #cta-bar {
-    background-color: $dark-blue;
-
-    p {
-      padding: 1.5em 0;
-      margin: 0;
-      float: left;
-      color: white;
-    }
-
-    .button {
-      float: right;
-    }
-  }
-
-  #about {
-    @extend %section-offset;
-    padding: 6em 0;
-    text-align: center;
-  }
-
-  #features {
-    @extend %section-offset;
-    padding: 6em 0;
-    text-align: center;
-
-    h2 ~ p {
-      margin-bottom: 4rem;
-    }
-
-    img {
-      margin-bottom: 1em;
-      border-radius: 50%;
-    }
-  }
-
-  #history {
-    @extend %section-offset;
-    padding: 6em 2em;
-    background-color: #f9f9f9;
-  }
-
-}
-
-.footer-container {
-  padding: 3em 0;
-  color: white;
-  background-color: $dark-blue;
-
-  h4, h5 {
-    color: white;
-  }
-
-  .social li {
-    padding-right:1.5em;
-    display: inline-block;
-  }
-
-}
-

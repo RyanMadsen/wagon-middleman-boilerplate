@@ -1,15 +1,6 @@
 #require 'extensions/sitemap.rb'
 require 'susy'
 
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
-set :images_dir, 'assets/images'
-set :partials_dir, 'partials'
-
-sprockets.append_path 'assets/bower_components/jquery/dist'
-sprockets.append_path 'assets/bower_components/font-awesome/fonts'
-sprockets.append_path 'assets/bower_components/font-awesome/scss'
-
 
 ###
 # Compass
@@ -67,57 +58,66 @@ end
 # end
 
 # TODO: Add any additional HTML pages here
-page "/sitemap.xml", layout: false
 page "/index.html", proxy: "/templates/index.html"
+page "/city-commission.html", proxy: "/templates/city-commission.html"
+page "/departments.html", proxy: "/templates/departments.html"
+page "/visitor.html", proxy: "/templates/visitor.html"
+page "/contact.html", proxy: "/templates/contact.html"
+page "/community.html", proxy: "/templates/community.html"
+page "/edc-idc.html", proxy: "/templates/edc-idc.html"
+page "/sitemap.xml", layout: false
+
+sprockets.append_path 'assets/bower_components/jquery/dist'
+sprockets.append_path 'assets/bower_components/scrollreveal/dist'
+sprockets.append_path 'assets/bower_components/font-awesome/fonts'
+sprockets.append_path 'assets/bower_components/font-awesome/scss'
+sprockets.append_path 'assets/bower_components/gsap/src/uncompressed'
+sprockets.append_path 'assets/bower_components/waypoints/lib'
+sprockets.append_path 'assets/bower_components/slick-carousel/'
+
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+set :partials_dir, 'partials'
 
 activate :es6
 activate :livereload
 
-
 configure :build do
 
+  activate :favicon_maker, :icons => {
+      'favicon_template.png' => [
+          { icon: "apple-touch-icon-152x152-precomposed.png" },
+          { icon: "apple-touch-icon-144x144-precomposed.png" },
+          { icon: "apple-touch-icon-120x120-precomposed.png" },
+          { icon: "apple-touch-icon-114x114-precomposed.png" },
+          { icon: "apple-touch-icon-76x76-precomposed.png" },
+          { icon: "apple-touch-icon-72x72-precomposed.png" },
+          { icon: "apple-touch-icon-60x60-precomposed.png" },
+          { icon: "apple-touch-icon-57x57-precomposed.png" },
+          { icon: "apple-touch-icon-precomposed.png", size: "57x57" },
+          { icon: "apple-touch-icon.png", size: "57x57" },
+          { icon: "favicon-196x196.png" },
+          { icon: "favicon-160x160.png" },
+          { icon: "favicon-96x96.png" },
+          { icon: "favicon-32x32.png" },
+          { icon: "favicon-16x16.png" },
+          { icon: "favicon.png", size: "16x16" },
+          { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
+          { icon: "mstile-144x144", format: "png" },
+      ]
+  }
 
-  # activate :favicon_maker, :icons => {
-  #     'favicon_template.png' => [
-  #         { icon: "apple-touch-icon-152x152-precomposed.png" },
-  #         { icon: "apple-touch-icon-144x144-precomposed.png" },
-  #         { icon: "apple-touch-icon-120x120-precomposed.png" },
-  #         { icon: "apple-touch-icon-114x114-precomposed.png" },
-  #         { icon: "apple-touch-icon-76x76-precomposed.png" },
-  #         { icon: "apple-touch-icon-72x72-precomposed.png" },
-  #         { icon: "apple-touch-icon-60x60-precomposed.png" },
-  #         { icon: "apple-touch-icon-57x57-precomposed.png" },
-  #         { icon: "apple-touch-icon-precomposed.png", size: "57x57" },
-  #         { icon: "apple-touch-icon.png", size: "57x57" },
-  #         { icon: "favicon-196x196.png" },
-  #         { icon: "favicon-160x160.png" },
-  #         { icon: "favicon-96x96.png" },
-  #         { icon: "favicon-32x32.png" },
-  #         { icon: "favicon-16x16.png" },
-  #         { icon: "favicon.png", size: "16x16" },
-  #         { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
-  #         { icon: "mstile-144x144", format: "png" },
-  #     ]
-  # }
 
-
-  #activate :minify_html, :remove_input_attributes => false
-
-  #activate :minify_css
-
-  #activate :minify_javascript
-
+  # activate :minify_html, :remove_input_attributes => false
+  activate :minify_css
+  activate :minify_javascript
   activate :relative_assets
-
-  #activate :sitemap_generator
-
-  #activate :autoprefixer
-
-  #activate :gzip
+  activate :autoprefixer
+  activate :gzip
+  # activate :wagon
 
   #activate :automatic_image_sizes
-
-  activate :wagon
 
   # Enable cache buster
   # activate :cache_buster

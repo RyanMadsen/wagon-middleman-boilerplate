@@ -1,7 +1,7 @@
 // Forms
 %input {
-  margin: 0.425em 0;
-  padding: 0.45em;
+  margin: 0.2em 0;
+  padding: 1em;
   display: block;
   color: $form-color;
   background-color: $form-background-color;
@@ -9,14 +9,17 @@
   box-shadow: $form-box-shadow;
   border-radius: $round-edges;
   outline: none;
+  width: 75%;
+  font-size: .8em;
 
   &:hover {
-    border: 1px solid $form-border-color-hover;
+    border: 2px solid $form-border-color-hover;
   }
 
   &:focus {
     box-shadow: $form-box-shadow;
     background-color: $form-background-color-focus;
+    border-color: black;
   }
 
   &::-webkit-input-placeholder {
@@ -33,6 +36,14 @@
 
   &:-ms-input-placeholder {
     color: $placeholder-text-color;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+  }
+
+  @media only screen and (max-width: 414px) {
+    width: 90%;
   }
 }
 

@@ -1,79 +1,98 @@
+.footer-container {
+  position: relative;
+  background: #f7f7f7 image-url('footer/palms.png') no-repeat center center;
+  background-size: cover;
+}
+
 footer {
-  padding: 0 1em;
-  background-color: $dark-gray;
+  @include container(87.5em);
+  padding: 2em 3em;
+  box-sizing: border-box;
 
-  .site-map {
-    @include container(100em);
-    padding: 2.25em 0 adjust-leading(2.25em) 0;
-    border-bottom: 1px solid $light-gray;
+  .footer-links {
+    @include span(2 of 12);
+  }
 
-    ul {
-      float: left;
-    }
+  a {
+    font-size: .8em;
+    color: #999;
+    letter-spacing: 0;
 
-    li {
-      display: inline-block;
-      margin-right: 3em;
-
-      &:nth-of-type(5) a {
-        color: $dark-blue;
-      }
-    }
-
-    .contact {
-      float: right;
-      color: white;
-
-      a {
-        font-weight: 400;
-      }
+    &:hover {
+      color: $teal;
     }
   }
 
-  .copyright {
-    @include container(100em);
-    padding: 1.5em 0;
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 2em 0 4em 0;
+  }
 
-    p {
-      margin: 0;
-      color: white;
+  h5 {
+    color: $maroon;
+  }
+
+  .footer-links.last {
+    @include span(2 of 12 last)
+  }
+
+  li > span {
+    font-size: .8em;
+  }
+
+  .social {
+    @include span(6 last);
+    padding: 1em 0;
+
+    img {
+      padding: 3em 0 1em 0;
     }
   }
 
-  @media only screen and (max-width: 767px) {
-    .site-map {
-      li {
-        margin-bottom: 1.5em;
-        display: block;
-        text-align: left;
-      }
+  .link-back {
+    @include span(6);
+    text-align: left;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    clear: both;
 
-      .contact {
-        text-align: left;
-      }
+    a {
+      color: $medium-gray;
+      font-weight: 700;
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 800px) {
-    .site-map {
-      li {
-        margin: 0 0.75em;
+  @media only screen and (max-width:768px) {
+    .footer-links {
+      @include span(4 of 12);
+      margin-top: 1em;
+
+      &:nth-of-type(3) {
+        @include span(4 of 12 last);
       }
+    }
+
+    .footer-links.last {
+      @include span(4 of 12 last)
     }
   }
 
-  @media only screen and (max-width: 1024px) {
-    .site-map {
-      text-align: center;
+  @media only screen and (max-width:680px) {
+    .footer-links {
+      @include span(12 of 12);
 
-      ul {
-        float: none;
-        margin-bottom: 1.5em;
+      &:nth-of-type(3) {
+        @include span(12 of 12);
       }
 
-      .contact {
-        float: none;
+      &:nth-of-type(2), &:nth-of-type(4), {
+        @include span(12 of 12);
       }
+    }
+
+    .footer-links.last {
+      @include span(12 of 12);
     }
   }
 }

@@ -9,10 +9,11 @@ body {
 
 // Links
 a {
-  font-family: $header-font-family;
-  font-weight: 700;
+  font-family: $font-family;
+  font-weight: 300;
   color: $link-color;
   text-decoration: none;
+  letter-spacing: .18em;
 
   &:hover {
     color: $link-color-hover;
@@ -31,11 +32,26 @@ body {
   background-color: $body-background-color;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   margin: 0;
   font-family: $header-font-family;
   font-weight: $header-font-weight;
   color: $header-font-color;
+}
+
+h4, h5, h6 {
+  margin: 0;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  color: $font-color;
+}
+
+h1, h2, h5, h6 {
+  letter-spacing: .05em;
+}
+
+h3, h4 {
+  letter-spacing: 0em;
 }
 
 p {
@@ -43,6 +59,7 @@ p {
   font-family: $font-family;
   font-weight: $font-weight;
   color: $font-color;
+  letter-spacing: .13em;
 }
 
 hr {
@@ -68,31 +85,53 @@ cite {
   }
 }
 
+// Letter spacing declarations
+h1   { letter-spacing: 0.05em; }
+h2   { letter-spacing: 0.05em; }
+h3   { letter-spacing: 0em; }
+h4   { letter-spacing: 0em; padding-bottom: 0.04em; }
+h5   { letter-spacing: 0.05em; }
+h6   { letter-spacing: 0.05em; }
+p,
+span { letter-spacing: 0em; }
+a    { letter-spacing: 0.18em; }
+input{ letter-spacing: 0.14em; }
+
+
+// Spacial classes
+.italic { font-style: italic; }
+.bold { font-weight: bold; }
+p.fine-print {
+  font-size: 1em;
+  letter-spacing: 0.075em;
+  font-style: italic;
+}
+
 // Modular Scale
 $typographic-element: (
   h1: (
-    $ms-up-3,
+    $ms-up-2,
     $ms-small-up-3
   ),
 
   h2: (
-    $ms-up-2,
+    $ms-up-1,
     $ms-small-up-2
   ),
 
   h3: (
-    $ms-up-1
+    $ms-up,
     $ms-small-up-1
   ),
 
   h4: (
-    $ms-up,
+    $ms-0,
     $ms-small-up
   ),
 
   h5: (
     $ms-base,
-    $ms-base
+    $ms-small-0
   ),
 
   h6: (

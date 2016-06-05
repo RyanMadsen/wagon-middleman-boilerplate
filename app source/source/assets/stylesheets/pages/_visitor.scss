@@ -1,0 +1,175 @@
+.visitor-container {
+  header {
+    @include container(95%);
+    background: image-url('visitors/vistors-header-img.jpg') no-repeat center right;
+    background-size: cover;
+    position: relative;
+    height: 30em;
+    text-align: left;
+    padding: 0 2.5em;
+    box-sizing: border-box;
+
+    .header-container {
+      @include container(87.5em);
+      position: relative;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+
+    h1, h5 {
+      color: white;
+    }
+
+    h1 {
+      font-weight: 400;
+      padding-bottom: 1rem;
+    }
+
+    h5 {
+      max-width: 30em;
+    }
+  }
+
+  .body-content {
+    @include container(87.5em);
+    padding: 4.5em 2.5em 0 2.5em;
+
+    .quick-links {
+      @include span(3);
+      padding-right: 2em;
+      box-sizing: border-box;
+
+      ul li {
+        border-bottom: 1px dotted $stroke-gray;
+        padding: .5em 0;
+
+        a {
+          display:block;
+          position: relative;
+        }
+
+        h5 {
+          display: inline-block;
+          padding-left: .5em;
+
+          &:hover {
+            color: $teal;
+          }
+        }
+
+        img {
+          position: absolute;
+          right: .5em;
+          top: .25em;
+        }
+      }
+    }
+
+    .visitor-content {
+      @include span(9 last);
+
+      .visitor-section {
+        clear: both;
+      }
+
+      .visitor-destination {
+        @include span(4);
+        margin-bottom: 3em;
+
+        &:last-of-type {
+          @include span(4 last);
+        }
+
+        h4 {
+          color: $dark-gray;
+        }
+
+        a {
+          display: inline-block;
+          color: $dark-gray;
+          letter-spacing: 0;
+
+          &:hover {
+            color: $teal;
+          }
+        }
+
+        img:first-of-type {
+          width: 100%;
+        }
+
+        img:last-of-type {
+          display: inline-block;
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  hr {
+    width: 3em;
+    border-bottom: 3px solid $maroon;
+    margin-bottom: 3em;
+    display: table-caption;
+  }
+
+  .active {
+    color: $teal;
+  }
+
+  @media only screen and (max-width:768px) {
+    .body-content {
+      .quick-links {
+        @include span(12)
+      }
+
+      .visitor-content {
+        @include span(12)
+      }
+    }
+  }
+
+  @media only screen and (max-width:680px) {
+    .body-content {
+
+      .visitor-content {
+        .visitor-destination {
+          @include span(6);
+          margin-bottom: 3em;
+
+          &:nth-of-type(2) {
+            @include span(6 last);
+          }
+
+          &:last-of-type {
+            @include span(6);
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:320px) {
+    .body-content {
+
+      .visitor-content {
+        .visitor-destination {
+          @include span(12);
+          margin-bottom: 3em;
+
+          &:nth-of-type(2) {
+            @include span(12);
+          }
+
+          &:last-of-type {
+            @include span(12);
+          }
+        }
+      }
+    }
+  }
+}

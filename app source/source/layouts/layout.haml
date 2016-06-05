@@ -15,14 +15,15 @@
 
   = stylesheet_link_tag 'all'
   = javascript_include_tag 'compatibility'
+  -# = javascript_include_tag 'plugins/loading'
 
 
-  %body{class: page_classes}
-    .off-canvas-wrap{data: { offcanvas: ''}}
-      .inner-wrap
-        %main.main{role: 'main'}
-          = partial 'navigation'
-          = yield
-          = partial 'footer'
+  %body.wrap.push{class: (data.page.custom_class.blank? ? page_classes : page_classes + ' ' + data.page.custom_class)}
+    %main.main{role: 'main'}
+      = partial 'top_bar'
+      = yield
+      = partial 'footer'
+      = partial 'google_maps'
+
 
     = javascript_include_tag 'application', defer: true, async: true
