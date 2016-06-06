@@ -1,0 +1,15 @@
+- "Sample 1":
+    image: /samples/edc/event-img-th.jpg
+    project: sample-1
+
+- "Sample 2":
+    image: /samples/edc/event-img-th.jpg
+    project: sample-1
+
+- "Sample 3":
+    image: /samples/edc/event-img-th.jpg
+    project: sample-1
+
+- "Sample 4":
+    image: /samples/edc/event-img-th.jpg
+    project: sample-1

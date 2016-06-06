@@ -1,0 +1,11 @@
+- "Investment":
+    content: "$40,000"
+    project: sample-1
+
+- "Jobs Created":
+    content: "100"
+    project: sample-1
+
+- "Time Created":
+    content: "4 months"
+    project: sample-1

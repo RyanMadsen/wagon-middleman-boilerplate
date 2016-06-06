@@ -1,0 +1,24 @@
+- "Alonso Perez":
+    name: "Alonso Perez"
+    title: "Honorable Mayor"
+    picture: /samples/city-commission/alonso-perez-img.png
+
+- "Victor Hernandez":
+    name: "Victor Hernandez"
+    title: "Mayor Pro Team"
+    picture: /samples/city-commission/victor-hernandez-img.png
+
+- "Daniel Marichalar":
+    name: "Daniel Marichalar"
+    title: "Commissioner Place 1"
+    picture: /samples/city-commission/daniel-marichalar-img.png
+
+- "Ricardo Sanchez":
+    name: "Ricardo Sanchez"
+    title: "Commissioner Place 1"
+    picture: /samples/city-commission/ricardo-sanchez-img.png
+
+- "David Sanchez":
+    name: "David Sanchez"
+    title: "Commissioner Place 1"
+    picture: /samples/city-commission/david-sanchez-img.png

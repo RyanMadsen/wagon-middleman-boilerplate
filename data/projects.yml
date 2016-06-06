@@ -1,0 +1,28 @@
+- "Sample 1":
+    name: "Sample 1"
+    header_image: /samples/edc/featured-project-1.jpg
+    description: "Aut voluptatum quis nostrum blanditiis. Modi quia occaecati mollitia perferendis voluptas vitae repudiandae. Cum sed quasi quidem quo deserunt reiciendis."
+    project_data_points:
+      - investment
+      - jobs-created
+      - time-created
+    gallery_images:
+      - sample-1
+      - sample-2
+      - sample-3
+      - sample-4
+
+- "Sample 2":
+    name: "Sample 2"
+    header_image: /samples/edc/featured-project-1.jpg
+    description: "Neque et voluptate vel. Dolor non rerum quos. Vero id accusamus ullam eum veritatis."
+
+- "Sample 3":
+    name: "Sample 3"
+    header_image: /samples/edc/featured-project-1.jpg
+    description: "Alias sint impedit vel aliquid quo. Consequatur hic adipisci perferendis. Dicta voluptatibus laudantium aut aut rerum ut. Ea maxime quam aut nam quos."
+
+- "Sample 4":
+    name: "Sample 4"
+    header_image: /samples/edc/featured-project-1.jpg
+    description: "Occaecati ab deleniti repudiandae qui vitae. Tempora maiores sint nihil hic numquam consequatur minus. Non et suscipit distinctio. Quisquam ipsa voluptatem labore officiis."

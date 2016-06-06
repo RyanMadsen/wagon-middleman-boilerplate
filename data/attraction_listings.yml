@@ -1,0 +1,24 @@
+- "Parks":
+    name: "Parks"
+    attractions:
+      - elsa-park
+      - elsa-park-2
+      - elsa-park-3
+
+- "Restaurants":
+    name: "Restaurants"
+
+- "Libraries":
+    name: "Libraries"
+
+- "Nearby Attractions":
+    name: "Nearby Attractions"
+
+- "Shopping":
+    name: "Shopping"
+
+- "Groceries":
+    name: "Groceries"
+
+- "Entertainment":
+    name: "Entertainment"

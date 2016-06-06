@@ -1,0 +1,20 @@
+- "Elsa Park":
+    name: "Esla Park"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    image: /samples/visitors/vistors-img.jpg
+    link: "http://google.com"
+    listing: parks
+
+- "Elsa Park 2":
+    name: "Esla Park"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    image: /samples/visitors/vistors-img.jpg
+    link: "http://google.com"
+    listing: parks
+
+- "Elsa Park 3":
+    name: "Esla Park"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    image: /samples/visitors/vistors-img.jpg
+    link: "http://google.com"
+    listing: parks
