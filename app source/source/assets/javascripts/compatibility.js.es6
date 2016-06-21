@@ -1,1 +1,1 @@
-// require_directory ./compatability
+//= require_directory ./compatibility
